@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import AnimatedContent from "@/components/animated-content";
 import CustomIcon from "@/components/custom-icon";
-import { SparkleIcon, StarIcon, HeartPulse } from "lucide-react";
+import { StarIcon, HeartPulse } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import cashfeed from "@/app/cashfeed.webp";
 import starapps from "@/app/starappsventures_logo.jpeg";
 
