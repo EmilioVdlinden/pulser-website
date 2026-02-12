@@ -7,7 +7,7 @@ import { ChevronDownIcon, CircleQuestionMarkIcon } from "lucide-react";
 
 export default function FaqSection() {
     // Track which index is open. Default to 0 to keep the first one open.
-    const [openIndex, setOpenIndex] = useState(0);
+    const [openIndex, setOpenIndex] = useState();
 
     return (
         <section className="">

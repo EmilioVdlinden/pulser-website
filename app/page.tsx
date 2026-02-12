@@ -10,10 +10,6 @@ export default function Page() {
     return (
         <main>
             <HeroSection />
-            <FeaturesSection />
-            <TestimonialSection />
-            <FaqSection />
-
             {/*
             
             <FeaturesSection />
