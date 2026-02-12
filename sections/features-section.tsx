@@ -32,7 +32,7 @@ export default function FeaturesSection() {
                     {features.map((feature, index) => (
                         <AnimatedContent 
                             key={index} 
-                            className={`${feature.cardBg} flex flex-col items-start p-6 rounded-xl w-full md:sticky md:top-26 border border-gray-200/50 shadow-sm`}
+                            className={`${feature.cardBg} flex flex-col items-start p-6 rounded-xl w-full md:sticky md:top-26 border border-gray-200/50 `}
                         >
                             <div className={`${feature.iconBg} p-2 text-white rounded-lg`}>
                                 <feature.icon size={24} />
