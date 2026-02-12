@@ -2,27 +2,27 @@ import { ITestimonial } from "@/types";
 
 export const testimonials: ITestimonial[] = [
     {
-        name: "John Doe",
-        handle: "@johndoe",
+        name: "Jeroen Vroman",
+        handle: "@jeroenv",
         image: "https://images.unsplash.com/photo-1546961329-78bef0414d7c?q=80&w=687&auto=format&fit=crop",
         quote:
-            "Buildify helped us launch AI agents in days instead of weeks. The workflow orchestration and monitoring are incredibly solid.",
+            "I used to spend my Sundays planning content. Now, Pulser handles the heavy lifting and pings my WhatsApp for a quick thumbs-up.",
         rating: 5,
     },
     {
-        name: "Jane Doe",
-        handle: "@janedoe",
+        name: "Lorenz Bogaert",
+        handle: "@lorenzb",
         image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=600",
         quote:
-            "The simplicity is what impressed me most. We were able to integrate AI agents into our existing stack without friction.",
+            "Most AI tools sound like robots. Pulser is different—it actually captures our tone. We’ve scaled our posting frequency by 5x without losing the human touch.",
         rating: 5,
     },
     {
-        name: "Bob Smith",
+        name: "Steve Jobs",
         handle: "@bobsmith",
         image: "https://images.unsplash.com/flagged/photo-1573740144655-bbb6e88fb18a?q=80&w=735&auto=format&fit=crop",
         quote:
-            "Reliable, scalable and developer-friendly. Buildify feels production-ready from day one.",
+            "The end-to-end automation is flawless. From trend spotting to final publishing, Pulser removed the friction from our entire creative workflow. Truly production-ready.",
         rating: 5,
     },
 ];

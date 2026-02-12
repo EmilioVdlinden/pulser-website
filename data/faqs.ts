@@ -2,28 +2,23 @@ import { IFaq } from "@/types";
 
 export const faqs: IFaq[] = [
     {
-        question: "What is Buildify?",
+        question: "Do I need any design or marketing skills?",
         answer:
-            "Buildify is a platform designed to help teams build, deploy and scale AI agents efficiently. It provides tools for agent creation, workflow orchestration and production-ready execution.",
+            "None at all. You send a WhatsApp message with a photo or a quick update, and Pulser does everything else — copy, design, scheduling, and publishing.",
     },
     {
-        question: "Do I need prior AI or ML experience to use Buildify?",
+        question: "Which platforms does Pulser publish to?",
         answer:
-            "No. Buildify is designed for both developers and non-experts, offering simple abstractions while still allowing advanced customization when needed.",
+            "Currently Facebook, and LinkedIn. More platforms (Google Business Profile, TikTok, and Instagram) are on the roadmap.",
     },
     {
-        question: "Can I integrate Buildify with my existing tools?",
+        question: "How does the approval flow work?",
         answer:
-            "Yes. Buildify supports plug-and-play integrations with APIs, databases and third-party services to fit seamlessly into your existing stack.",
+            "Pulser pings you on WhatsApp before anything goes live. One tap to approve, or a quick edit to perfect it. Total control, zero effort.",
     },
     {
-        question: "Is Buildify suitable for production use?",
+        question: "What if I don't send any updates for a week?",
         answer:
-            "Absolutely. Buildify includes monitoring, security controls and scalable infrastructure to ensure reliable performance in real-world production environments.",
-    },
-    {
-        question: "Can I customize or extend AI agents?",
-        answer:
-            "Yes. You can customize agent logic, workflows and integrations, or extend functionality using your own services and APIs.",
+            "Pulser still keeps you active by generating content from your latest reviews, website changes, and seasonal relevance — and asks for your approval before posting.",
     },
 ];

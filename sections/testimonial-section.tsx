@@ -5,12 +5,12 @@ import { ShieldCheckIcon, StarIcon } from "lucide-react";
 
 export default function TestimonialSection() {
     return (
-        <section id="testimonials" className="px-4 md:px-16 lg:px-24 xl:px-32 border-b border-gray-200">
-            <div className="p-4 pt-20 md:p-20 flex flex-col items-center max-w-7xl mx-auto justify-center border-x border-gray-200">
+        <section id="testimonials" className="px-4 md:px-16 lg:px-24 xl:px-32 ">
+            <div className="p-4 pt-20 md:p-20 flex flex-col items-center max-w-7xl mx-auto justify-center ">
                 <SectionTitle
                     icon={ShieldCheckIcon}
                     title="What our users say"
-                    subtitle="Teams trust Buildify to build, deploy and scale reliable AI agents in real-world production."
+                    subtitle="Teams trust Pulser to build, deploy and scale reliable AI agents in real-world production."
                 />
                 <div className="flex flex-wrap gap-8 items-center justify-center mt-24">
                     {testimonials.map((testimonial, index) => (
@@ -33,9 +33,6 @@ export default function TestimonialSection() {
                         </AnimatedContent>
                     ))}
                 </div>
-                <a href="#" className="mt-20 px-8 py-2.5 rounded-full bg-orange-50  border border-orange-200 text-orange-500">
-                    See more
-                </a>
             </div>
         </section>
     )
