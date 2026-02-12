@@ -12,30 +12,32 @@ export default function FeaturesSection() {
                         <SectionTitle
                             dir="left"
                             icon={SparkleIcon}
-                            title="The Content Engine"
-                            subtitle="From trend detection to auto-publishing. Pulser handles the complexity of social growth so you can focus on the big picture."
+                            title="Your Social Pilot"
+                            subtitle="Stop worrying about what to post next. Pulser automates your entire social presence while keeping you in the driver’s seat."
                         />
-                        <AnimatedContent className="p-4 md:p-6 bg-orange-500 w-full rounded-xl mt-12">
+                        <AnimatedContent className="p-4 md:p-6 bg-orange-500 w-full rounded-xl mt-12 shadow-lg shadow-orange-200">
                             <p className="text-lg text-white font-medium">
-                                Join 500+ creators and brands scaling their presence with AI that actually sounds human.
+                                High-quality content, scheduled and published—no manual work required.
                             </p>
 
-                            <a href="#" className="bg-white w-max hover:bg-gray-100 px-5 py-2 rounded-full mt-6 flex items-center gap-1 font-medium text-orange-600 transition-colors" >
-                                See it in action
+                            <a href="#" className="bg-white w-max hover:bg-gray-50 px-5 py-2 rounded-full mt-6 flex items-center gap-1 font-semibold text-orange-600 transition-all hover:scale-105" >
+                                Start growing now
                                 <ArrowUpRightIcon size={20} />
                             </a>
                         </AnimatedContent>
                     </div>
                 </div>
                 
-                {/* Feature cards will pull from your features data file */}
                 <div className="p-4 pt-16 md:p-16 space-y-6">
                     {features.map((feature, index) => (
-                        <AnimatedContent key={index} className={`${feature.cardBg} flex flex-col items-start p-6 rounded-xl w-full md:sticky md:top-26`}>
-                            <div className={`${feature.iconBg} p-2 text-white rounded-md`}>
+                        <AnimatedContent 
+                            key={index} 
+                            className={`${feature.cardBg} flex flex-col items-start p-6 rounded-xl w-full md:sticky md:top-26 border border-gray-200/50 shadow-sm`}
+                        >
+                            <div className={`${feature.iconBg} p-2 text-white rounded-lg`}>
                                 <feature.icon size={24} />
                             </div>
-                            <p className="text-base font-semibold mt-4">{feature.title}</p>
+                            <h3 className="text-base font-bold mt-4 text-zinc-900">{feature.title}</h3>
                             <p className="text-sm text-gray-600 mt-2 leading-relaxed">{feature.description}</p>
                         </AnimatedContent>
                     ))}
