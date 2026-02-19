@@ -1,9 +1,10 @@
 import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
-import Navbar from "@/components/navbar";
+import Header from "@/components/header";
 import LenisScroll from "@/components/lenis";
 import Footer from "@/components/footer";
+import { ModalProvider } from "@/context/modal-context";
 
 const inter = Inter({
     variable: "--font-sans",
@@ -22,12 +23,11 @@ export const metadata: Metadata = {
     },
     description:
       "Automate your social media content effortlessly. Connect your website, reviews, and social accounts, send updates via WhatsApp, and let Pulser create, schedule, and publish posts on LinkedIn, Instagram, and Facebook.",
-        icons: {
-          icon: "/favicon.ico",      // standard favicon
-          apple: "/favicon.ico", // for iOS devices
-          shortcut: "/favicon.ico", // optional
-        },
-      
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/favicon.ico",
+      shortcut: "/favicon.ico",
+    },
     keywords: [
       "AI social media",
       "small business automation",
@@ -58,8 +58,7 @@ export const metadata: Metadata = {
       description:
         "Save time and post consistently. Connect your accounts and let Pulser handle LinkedIn, Instagram, and Facebook content automatically.",
     },
-  };
-  
+};
 
 export default function RootLayout({
     children,
@@ -67,11 +66,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-      
         <html lang="en">
             <body>
-                <LenisScroll />
-                {children}
+                <ModalProvider>
+                    <Header />
+                    <LenisScroll />
+                    {children}
+                    <Footer />
+                </ModalProvider>
             </body>
         </html>
     );

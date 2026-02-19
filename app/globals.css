@@ -10,3 +10,9 @@
         @apply bg-white text-sm text-gray-800 antialiased;
     }
 }
+
+/* globals.css */
+html {
+    scroll-padding-top: 100px; /* adjust to match your nav height + top offset */
+    scroll-behavior: smooth;
+  }

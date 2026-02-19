@@ -1,117 +1,97 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AnimatedContent from "@/components/animated-content";
-import CustomIcon from "@/components/custom-icon";
-import { StarIcon, HeartPulse } from "lucide-react";
-import Image from "next/image";
-import cashfeed from "@/app/cashfeed.webp";
-import starapps from "@/app/starappsventures_logo.jpeg";
+import { ArrowRight } from "lucide-react";
+import pulsy from '@/public/assets/pulsy-hi.png';
+import { useModal } from "@/context/modal-context";
+
+const ROTATING_TEXTS = [
+  "without spending your own time.",
+  "at a fraction of the cost.",
+  "on autopilot, 24/7.",
+  "built for busy businesses.",
+];
 
 export default function HeroSection() {
+  const [textIndex, setTextIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+  const { openModal } = useModal();
 
-  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setTextIndex((prev) => (prev + 1) % ROTATING_TEXTS.length);
+        setFade(true);
+      }, 1000);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section className="bg-[url('/assets/hero-gradient-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-16 lg:px-24 xl:px-32">
-      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center h-screen">
-        <AnimatedContent
-          reverse
-          distance={30}
-          className="flex items-center gap-2 bg-white/50 backdrop-blur p-1 rounded-full"
-        >
-          <div className="flex items-center -space-x-3">
-            <Image
-              src={cashfeed}
-              alt="Company 1"
-              className="w-7 h-7 rounded-full border-2 border-white"
-            />
-            <Image
-              src={starapps}
-              alt="Company 2"
-              className="w-7 h-7 rounded-full border-2 border-white"
-            />
-          </div>
-          <div className="h-5 w-px mx-1 bg-white rounded-full" />
-          <span>Used by local businesses</span>
-          <div className="h-5 w-px mx-1 bg-white rounded-full" />
-          <div className="flex items-center gap-1 pr-3">
-            <StarIcon className="size-4.5 fill-orange-500 stroke-orange-500" />
-            <span>4.9</span>
-          </div>
-        </AnimatedContent>
+    <div className="px-3 sm:px-4 md:px-8 pt-6 sm:pt-8 pb-0">
+      <section className="relative rounded-2xl sm:rounded-3xl bg-linear-to-tl from-orange-300 to-orange-500 overflow-hidden">
 
-        <AnimatedContent distance={30} delay={0.1} className="relative">
-          <h1 className="text-center font-urbanist font-bold max-w-5xl md:max-w-6xl text-5xl sm:text-6xl md:text-6xl leading-tight">
-            <span className="block md:whitespace-nowrap">
-              Stay visible on social media
-            </span>
-            <span className="text-orange-500 block md:whitespace-nowrap">
-              without spending your own time.
-            </span>
-          </h1>
-          <div className="absolute -top-5 right-13 hidden md:block">
-            <CustomIcon icon={HeartPulse} dir="right" />
-          </div>
-        </AnimatedContent>
+        {/* Main content */}
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center justify-center min-h-[85vh] sm:min-h-[80vh] md:min-h-[75vh] pt-28 sm:pt-36 md:pt-40 pb-56 sm:pb-52 md:pb-48 px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
 
-        <AnimatedContent distance={30} delay={0.2}>
-          <p className="text-center text-base/7 text-zinc-500 max-w-lg mt-4">
-            We automatically create and post every week for your business. No
-            hassle. No marketing knowledge needed.
-          </p>
-        </AnimatedContent>
+          {/* Badge */}
+          <AnimatedContent distance={20} delay={0}>
+            <a className="flex items-center gap-2 border border-gray-200 rounded-full p-1 pr-3 text-xs text-orange-500 transition bg-white mb-6 sm:mb-8">
+              <span className="bg-orange-500 text-white text-xs px-3 py-1 rounded-full whitespace-nowrap">
+                NEW
+              </span>
+              <span className="text-xs">The world's first AI marketing employee for SMBs</span>
+            </a>
+          </AnimatedContent>
 
-        <AnimatedContent className="flex flex-col md:flex-row items-center gap-4 mt-6 w-full md:w-auto">
-          <button 
-            onClick={() => setOpen(true)}
-            className="cursor-pointer relative py-3 md:py-2.5 w-full md:w-auto px-8 bg-white/50 text-gray-600 font-medium text-center border border-white rounded-full"
-          >
-            Join waitinglist
-            <AnimatedContent
-              direction="horizontal"
-              className="absolute size-8 pointer-events-none right-0 top-full -translate-y-1/2"
+          {/* Heading */}
+          <AnimatedContent distance={30} delay={0.1} className="relative w-full">
+            <h1 className="text-center font-urbanist font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.15]">
+              <span className="font-urbanist block md:whitespace-nowrap text-zinc-900">
+                Your full-time marketing manager.
+              </span>
+              <span
+                className={`text-white block md:whitespace-nowrap mt-1 md:mt-0 transition-all duration-1000 ease-in-out font-urbanist text-3xl sm:text-4xl md:text-6xl ${
+                  fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+                }`}
+              >
+                {ROTATING_TEXTS[textIndex]}
+              </span>
+            </h1>
+          </AnimatedContent>
+
+          {/* Paragraph */}
+          <AnimatedContent distance={30} delay={0.2}>
+            <p className="text-center text-white/80 max-w-sm sm:max-w-md mt-6 sm:mt-8 mb-8 sm:mb-10 text-base sm:text-lg leading-relaxed px-2 sm:px-0">
+              Equip your team with Pulsy, the AI agent that creates high-quality content and boosts your social presence.
+            </p>
+          </AnimatedContent>
+
+          {/* CTA Button */}
+          <AnimatedContent distance={20} delay={0.3}>
+            <button
+              onClick={openModal}
+              className="cursor-pointer flex items-center justify-center py-3.5 px-8 sm:px-10 border border-orange-200 bg-linear-to-tl from-orange-600 to-orange-500 text-white rounded-full font-medium transition-transform active:scale-95 text-sm sm:text-base"
             >
-              <Image
-                src="/assets/mouse-arrow.svg"
-                alt="mouse-arrow"
-                width={24}
-                height={24}
-              />
-            </AnimatedContent>
-          </button>
-        </AnimatedContent>
-      </div>
-          {open && (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-        
-        {/* Modal container */}
-        <div className="relative w-[95%] md:w-[800px] h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
-          
-          {/* Close button */}
-          <button
-            onClick={() => setOpen(false)}
-            className="cursor-pointer absolute top-3 right-3 z-10 bg-black/70 text-white rounded-full px-3 py-1 text-sm hover:bg-black"
-          >
-            ✕
-          </button>
+              Hire pulsy
+              <ArrowRight className="ml-2" size={16} />
+            </button>
+          </AnimatedContent>
+        </div>
 
-          {/* Tally iframe */}
-          <iframe
-            src="https://tally.so/r/5B1zrQ?transparentBackground=1"
-            width="100%"
-            height="100%"
-            frameBorder={0}
-            marginHeight={0}
-            marginWidth={0}
-            title="Join waiting list"
+        {/* Pulsy pinned to bottom-center */}
+        <div className="absolute bottom-0 left-1/2 sm:left-[60%] md:left-2/3 -translate-x-1/2 z-10 pointer-events-none">
+          <img
+            src={pulsy.src}
+            alt="Pulsy mascot"
+            className="w-44 sm:w-56 md:w-72 -mb-4 sm:-mb-6 object-contain"
           />
         </div>
-      </div>
-    )}
 
-    </section>
-    
+      </section>
+    </div>
   );
 }
 

@@ -1,17 +1,24 @@
 import FaqSection from "@/sections/faq-section";
-import FeaturesSection from "@/sections/features-section";
+import HowItWorksSection from "@/sections/how-it-works-section";
+import MeetPulseSection from "@/sections/meet-pulse-section";
+import HirePulsySection from "@/sections/hire-pulsy-section";
+import FeatureSection from "@/sections/feature-section";
 import HeroSection from "@/sections/hero-section";
-import OurTeamSection from "@/sections/our-team";
-import PricingSection from "@/sections/pricing-section";
-import StatsSection from "@/sections/stats-section";
-import TestimonialSection from "@/sections/testimonial-section";
-
+import CTA from "@/sections/CTA-section";
+import BeforeAfterSection from "@/sections/before-after-section";
 export default function Page() {
     return (
         <main>
             <HeroSection />
-            {/*
+            <HowItWorksSection/>
+            <MeetPulseSection/>
+            <FeatureSection />
+            <HirePulsySection/>
+            <FaqSection />
+            <CTA/>
             
+            {/*
+            <HirePulsySection/>
             <FeaturesSection />
             <OurTeamSection />
             <PricingSection />

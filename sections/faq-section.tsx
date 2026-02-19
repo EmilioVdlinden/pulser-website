@@ -10,15 +10,16 @@ export default function FaqSection() {
     const [openIndex, setOpenIndex] = useState();
 
     return (
-        <section className="">
-            <div className="px-4 md:px-16 lg:px-24 xl:px-32">
-                <div className="p-4 pt-20 md:pt-20 md:pb-10 flex flex-col items-center max-w-7xl mx-auto justify-center ">
-                    <SectionTitle
-                        icon={CircleQuestionMarkIcon}
-                        title="Got questions?"
-                        subtitle="Everything you need to know about Pulser and how to get started."
-                    />
-                </div>
+        <section id="faq" className="">
+            <div className="pt-20 text-center mb-16 flex flex-col items-center gap-6">
+            <span className="bg-linear-to-tr from-orange-300 to-orange-500 text-white text-xs px-3 py-1 rounded-full">
+                How it works
+            </span>
+            <SectionTitle
+                icon={CircleQuestionMarkIcon}
+                title="Got questions?  "
+                subtitle="Everything you need to know about Pulser and how to get started."
+            />
             </div>
             <div className="px-4 md:px-16 lg:px-24 xl:px-32 ">
                 <div className="grid grid-cols-1 max-w-7xl mx-auto">
