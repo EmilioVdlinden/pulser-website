@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="fixed top-4 sm:top-6 md:top-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between w-[calc(100%-24px)] sm:w-[calc(100%-32px)] md:w-auto px-4 sm:px-6 md:px-8 py-2 rounded-full backdrop-blur-md border border-gray-100 bg-white/40">
+      <nav className="fixed top-4 sm:top-6 md:top-16 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between w-[calc(100%-24px)] sm:w-[calc(100%-32px)] md:w-auto px-4 sm:px-6 md:px-8 py-2 rounded-full backdrop-blur-md border border-gray-100 bg-white/40">
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
