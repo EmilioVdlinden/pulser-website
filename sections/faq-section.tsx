@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionTitle from "@/components/section-title";
 import { faqs } from "@/data/faqs";
-import { ChevronDownIcon, CircleQuestionMarkIcon } from "lucide-react";
+import { ChevronDownIcon } from "lucide-react";
 
 export default function FaqSection() {
     // Track which index is open. Default to 0 to keep the first one open.
@@ -16,7 +16,6 @@ export default function FaqSection() {
                 How it works
             </span>
             <SectionTitle
-                icon={CircleQuestionMarkIcon}
                 title="Got questions?  "
                 subtitle="Everything you need to know about Pulser and how to get started."
             />
