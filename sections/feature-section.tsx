@@ -7,7 +7,7 @@ import { RefreshCcw, MessageCircle, Fingerprint, Layers, PiggyBank, ShieldCheck}
 interface FeatureItem {
   title: string;
   description: string;
-  image: string;
+  image?: string;
   icon?: JSX.Element;
 }
 
