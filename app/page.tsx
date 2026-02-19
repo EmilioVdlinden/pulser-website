@@ -15,14 +15,6 @@ export default function Page() {
             <HirePulsySection/>
             <FaqSection />
             <CTA/>
-            
-            {/*
-            <HirePulsySection/>
-            <FeaturesSection />
-            <OurTeamSection />
-            <PricingSection />
-            <TestimonialSection />
-             */}
         </main>
     );
 }
