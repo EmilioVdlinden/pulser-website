@@ -5,7 +5,6 @@ import HirePulsySection from "@/sections/hire-pulsy-section";
 import FeatureSection from "@/sections/feature-section";
 import HeroSection from "@/sections/hero-section";
 import CTA from "@/sections/CTA-section";
-import BeforeAfterSection from "@/sections/before-after-section";
 export default function Page() {
     return (
         <main>
