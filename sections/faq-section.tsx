@@ -7,7 +7,7 @@ import { ChevronDownIcon, CircleQuestionMarkIcon } from "lucide-react";
 
 export default function FaqSection() {
     // Track which index is open. Default to 0 to keep the first one open.
-    const [openIndex, setOpenIndex] = useState();
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <section id="faq" className="">
@@ -33,7 +33,7 @@ export default function FaqSection() {
                                     className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden"
                                 >
                                     <button
-                                        onClick={() => setOpenIndex(isOpen ? -1 : index)}
+                                        onClick={() => setOpenIndex(isOpen ? null : index)}
                                         className="flex w-full items-center justify-between p-6 select-none cursor-pointer text-left"
                                     >
                                         <h3 className="font-medium text-base text-zinc-900">{faq.question}</h3>
