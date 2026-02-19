@@ -9,7 +9,7 @@ import HowItWorksThree from "@/public/assets/how-it-works-3.svg";
 interface FeatureItem {
   title: string;
   description: string;
-  image: string;
+  image: { src: string };
   icon: React.ReactNode;
 }
 
