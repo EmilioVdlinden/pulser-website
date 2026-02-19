@@ -1,5 +1,4 @@
 import { ISectionTitle } from "@/types";
-import CustomIcon from "./custom-icon";
 import AnimatedContent from "./animated-content";
 
 export default function SectionTitle({ title, subtitle, dir = 'center' }: ISectionTitle) {

@@ -11,7 +11,6 @@ export interface ICustomIcon {
 };
 
 export interface ISectionTitle {
-    icon: LucideIcon;
     title: string;
     subtitle: string;
     dir?: 'left' | 'center';
