@@ -2,7 +2,7 @@ import { ISectionTitle } from "@/types";
 import CustomIcon from "./custom-icon";
 import AnimatedContent from "./animated-content";
 
-export default function SectionTitle({ icon, title, subtitle, dir = 'center' }: ISectionTitle) {
+export default function SectionTitle({ title, subtitle, dir = 'center' }: ISectionTitle) {
     return (
         <div className={`flex flex-col gap-6 ${dir === 'center' ? 'items-center text-center' : 'md:items-start items-center'}`}>
             <AnimatedContent className="flex flex-col md:flex-row items-center gap-4">
