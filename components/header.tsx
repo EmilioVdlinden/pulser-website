@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="fixed top-4 sm:top-6 md:top-16 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between w-[calc(100%-24px)] sm:w-[calc(100%-32px)] md:w-auto px-4 sm:px-6 md:px-8 py-2 rounded-full backdrop-blur-md border border-gray-100 bg-white/40">
+      <nav className="fixed top-4 sm:top-6 md:top-16 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between w-[calc(100%-24px)] sm:w-[calc(100%-32px)] md:w-auto px-4 sm:px-6 md:px-8 py-2 rounded-2xl sm:rounded-full lbackdrop-blur-md border border-gray-100 bg-white/40">
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
@@ -39,7 +39,7 @@ export default function Header() {
 
         {/* Mobile: brand + hamburger */}
         <div className="flex md:hidden items-center justify-between w-full">
-          <span className="text-sm font-semibold text-gray-900">Pulsy</span>
+          <span className="text-sm font-semibold text-gray-900">Pulser</span>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-1.5 text-gray-700 hover:text-gray-900"
@@ -60,7 +60,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed top-16 sm:top-20 left-1/2 -translate-x-1/2 z-40 w-[calc(100%-24px)] sm:w-[calc(100%-32px)] bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 p-5 md:hidden shadow-lg">
+        <div className="fixed top-16 sm:top-20 left-1/2 -translate-x-1/2 z-40 w-[calc(100%-24px)] sm:w-[calc(100%-32px)] bg-white/80 backdrop-blur-md rounded-2xl  border border-white/50 p-5 md:hidden shadow-lg">
           <div className="flex flex-col gap-1">
             {[
               { href: "#how-it-works", label: "How it works" },

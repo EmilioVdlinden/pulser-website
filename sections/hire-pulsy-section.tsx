@@ -33,9 +33,10 @@ const HirePulsySection: React.FC = (): React.ReactElement => {
         </AnimatedContent>
 
         {/* Image Section */}
-        <div className="flex justify-center w-full ml-40 -mt-2">
+        {/* On mobile: centered, smaller, more margin top */}
+        {/* On desktop: shifted right with ml-40 to align with button */}
+        <div className="flex justify-center w-full ml-0 md:ml-40 -mt-4 md:-mt-2">
           <div
-            className="relative"
             style={{
               maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)'
@@ -44,7 +45,7 @@ const HirePulsySection: React.FC = (): React.ReactElement => {
             <img
               src={pulsy.src}
               alt="Pulsy Mascot"
-              className="max-w-xs md:max-w-xs h-auto"
+              className="w-32 sm:w-40 md:max-w-xs h-auto"
             />
           </div>
         </div>
