@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import AnimatedContent from "@/components/animated-content";
 import { ArrowRight } from "lucide-react";
@@ -70,19 +71,29 @@ export default function HeroSection() {
           </AnimatedContent>
 
           {/* CTA Button */}
+          <div className="flex gap-4 sm:gap-6">
           <AnimatedContent distance={20} delay={0.3}>
             <button
               onClick={openModal}
               className="cursor-pointer flex items-center justify-center py-3.5 px-8 sm:px-10 border border-orange-200 bg-linear-to-tl from-orange-600 to-orange-500 text-white rounded-full font-medium transition-transform active:scale-95 text-sm sm:text-base"
             >
               Hire pulsy
-              <ArrowRight className="ml-2" size={16} />
             </button>
           </AnimatedContent>
+          <AnimatedContent distance={20} delay={0.3}>
+            <Link 
+              href="/resume"
+              className="cursor-pointer flex items-center justify-center py-3.5 px-8 sm:px-10 border border-white bg-white/30 text-white rounded-full font-medium transition-transform active:scale-95 text-sm sm:text-base"
+            >
+              See my resume
+              <ArrowRight className="ml-2" size={16} />
+            </Link>
+          </AnimatedContent>
+          </div>
         </div>
 
         {/* Pulsy pinned to bottom-center */}
-        <div className="absolute bottom-0 left-1/2 sm:left-[60%] md:left-2/3 -translate-x-1/2 z-10 pointer-events-none">
+        <div className="absolute bottom-0 left-1/2 sm:left-[60%] md:left-3/4 -translate-x-1/2 z-10 pointer-events-none">
           <img
             src={pulsy.src}
             alt="Pulsy mascot"

@@ -2,10 +2,16 @@
 
 import { useState } from "react";
 import { useModal } from "@/context/modal-context";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+
+  const pathname = usePathname();
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { openModal } = useModal();
+
+  if (pathname === "/resume") return null;
 
   return (
     <>
