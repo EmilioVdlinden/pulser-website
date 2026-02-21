@@ -206,7 +206,7 @@ export default function Resume() {
               </h2>
               
               <p className="text-gray-600 text-sm">
-                Short description or subtext could go here.
+                Right now, you can find me posting on LinkedIn and Facebook—stay tuned, as I'll be launching on Instagram and TikTok very soon! 
               </p>
 
               {/* left-1/2: Puts the left edge of the image at the center of the card.
