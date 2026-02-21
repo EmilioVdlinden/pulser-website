@@ -26,6 +26,12 @@ import pulsy from '@/public/assets/pulsy-head.png'
 import HowItWorksThree from "@/public/assets/how-it-works-3.svg";
 import { useModal } from "@/context/modal-context";
 
+interface FeatureItem {
+  title: string;
+  description: string;
+  unit: string;
+}
+
 
 const featuresData: FeatureItem[] = [
   {
