@@ -11,7 +11,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { openModal } = useModal();
 
-  if (pathname === "/resume") return null;
+  if (pathname === "/resume" || pathname === "/privacy-policy") return null;
 
   return (
     <>
